@@ -22,9 +22,9 @@ MonoBehaviour:
     isPrivate: 0
     createdAt: 2025-03-14T11:18:21-0700
     trainingStatus: 1
-    lastTrainDuration: 58
-    lastTrainedAt: 2025-03-14T11:24:35-0700
-    nextTrainAt: 2025-03-14T11:23:37-0700
+    lastTrainDuration: 42
+    lastTrainedAt: 2025-04-01T18:33:05-0700
+    nextTrainAt: 2025-04-01T18:32:23-0700
     intents:
     - id: 640226788657749
       name: wit$cancel
