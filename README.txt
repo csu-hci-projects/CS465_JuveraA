@@ -16,4 +16,3 @@ meta-Voice SDK - https://assetstore.unity.com/packages/tools/integration/meta-vo
 
 manual for VR Template - https://docs.unity3d.com/Packages/com.unity.template.vr@6.1/manual/index.html
 
-Vosk Voice control- https://alphacephei.com/vosk/unity
