@@ -1,7 +1,9 @@
-Video for YouTube - https://youtu.be/fWwnHfDn_1I
+Video for YouTube - 
+Prototype- https://youtu.be/Oh8xNo-Mfvs
+Code- https://youtu.be/mlp9b9p7GUs
 
 
-overleaf LaTex - https://www.overleaf.com/read/pqwmbmwcyqms#15a54f
+overleaf LaTex -https://www.overleaf.com/read/pqwmbmwcyqms#15a54f
 
 
 
