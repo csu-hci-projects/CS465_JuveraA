@@ -1,0 +1,308 @@
+%%
+%% This is file `sample-acmlarge.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `all,journal,bibtex,acmlarge')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-acmlarge.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%%
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%% The first command in your LaTeX source must be the \documentclass
+%% command.
+%%
+%% For submission and review of your manuscript please change the
+%% command to \documentclass[manuscript, screen, review]{acmart}.
+%%
+%% When submitting camera ready or to TAPS, please change the command
+%% to \documentclass[sigconf]{acmart} or whichever template is required
+%% for your publication.
+%%
+%%
+\documentclass[manuscript, screen, review]{acmart}
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+% \setcopyright{acmlicensed}
+% \copyrightyear{2018}
+% \acmYear{2018}
+% \acmDOI{XXXXXXX.XXXXXXX}
+
+% %%
+% %% These commands are for a JOURNAL article.
+% \acmJournal{POMACS}
+% \acmVolume{37}
+% \acmNumber{4}
+% \acmArticle{111}
+% \acmMonth{8}
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% For managing citations, it is recommended to use bibliography
+%% files in BibTeX format.
+%%
+%% You can then either use BibTeX with the ACM-Reference-Format style,
+%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
+%% support for advanced citation of software artefact from the
+%% biblatex-software package, also separately available on CTAN.
+%%
+%% Look at the sample-*-biblatex.tex files for templates showcasing
+%% the biblatex styles.
+%%
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{Inclusive Voice Control Interface in Virtual Reality}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+\author{Anthony Juvera}
+\authornote{Research conducted for an undergrad course.}
+\email{antjuve@colostate.edu}
+\orcid{1234-5678-9012}
+\affiliation{%
+  \institution{Colorado State University}
+  \city{Westminster}
+  \state{Colorado}
+  \country{USA}
+}
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+% \renewcommand{\shortauthors}{Trovato et al.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+  Voice-based interfaces offers promising alternatives to handheld controllers in virtual reality (VR), especially for users who have limited motor function. In this study, I explored a hands-free VR navigation system designed in Unity for the Oculus Quest 3. The system integrates Wit.ai, a cloud-based natural language processing platform, to interpret spoken navigation commands, enabling step-based movement through a virtual maze. Users orient direction by turning their head past a predefined angular threshold, triggering reorientation. This pilot study used a small, diverse sample that tested the usability of this system with a series of maze completion tasks. Performance was evaluated using task completion time, command recognition accuracy, and post-task user feedback. (add results)
+\end{abstract}
+
+
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Virtual Reality, Voice Control}
+
+\received{January 2025 }
+\received[revised]{March 2025}
+% \received[accepted]{5 June 2009}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\section{Introduction}
+Virtual reality (VR) has become a powerful tool for immersive interaction across gaming, education, and healthcare. However, the standard method of interaction, being the use of handheld controllers, creates barriers for individuals with limited hand mobility. Traditional interfaces that depend on manual input are not well suited for users who cannot effectively manipulate these devices, thereby excluding potential users from fully engaging with VR experiences. 
+
+In order to bridge this gap, recent studies have explored alternative input modalities but many have required complex machine learning pipelines or are not optimized for standalone devices like the Oculus Quest 3. This work proposes a simplified voice-based system that integrates Wit.ai and head-tracking in order to navigate in virtual environments. Using Wit.ai, a cloud-based natural language processing platform, the system interprets spoken navigation commands, such as "forward 5 steps" to navigate through a maze-like virtual environment, while head tracking is used to make turns. 
+
+By facilitating hands-free operation, the system aims not only to improve usability but also to empower users with motor impairments to experience VR in a more natural and inclusive way. Ultimately, this research seeks to contribute to a more accessible design ensuring that immersive technologies are usable by all users regardless of their physical capabilities Prior work has not widely explored voice commands with distance modifiers or combined them with head-tracking for full navigation. This project fills that gap by building and testing a prototype that uses spoken step commands and head orientation for hands-free VR movement.
+
+\section{Related Work}
+Since the early development of VR, natural language interaction has long been at the forefront of proposed interfaces. Though, historically underutilized compared to gaze or gesture controls. Voice input has often only been included when necessary, rather than being a standard interaction method or systematically evaluated on performance and user preference across all VR applications  \cite{a1}. Early systems typically only supported simple spoken commands or short phrases combined with pointing gestures, limiting their role to supplementary interaction method. 
+
+More recent work has demonstrated the effectiveness of purely speech-driven controls for scenarios where the subjects hands are busy, like in a sterile medical setting, where voice becomes the primary means of input \cite{a2}. These studies reinforce the idea that voice interaction can be both functional and intuitive, especially when traditional input methods are impracticable. Building on these insights, the system presented in this study uses voice as the primary input modality, replacing handheld controllers entirely. Exploring how users issue natural spoken commands like "forward five steps" to control locomotion.
+
+
+
+\subsection{Usability}
+Evaluations of voice input in VR suggest this it has the potential to add to the user's experience \cite{a3} and serve as an effective interaction method. When voice control navigation, while in a wheelchair within virtual environments, is compared to traditional input modalities, it was revealed that participants travel longer distances but also had a higher collision rate \cite{a3}. However, combining voice control with autonomous systems enables a higher degree of interaction and control, which positively impact quality of life, efficiency, and safety \cite{a3}. Similarly, participants who were assessed on their perception of voice control across orientation, customization, and analysis tasks, also rated usability high and provided positive feedback on factors such as sickness, comfort, and presence, with an overall accuracy of 85 percent using voice input alone \cite{a2}. 
+
+These outcomes support the conclusion that voice is a feasible input modality for VR environments. This study draws on those finding to evaluate a voice-controlled navigation system that relies solely on speech for directional movement, enhanced through natural phrasing and explicit step counts.
+
+\subsection{Accessibility}
+
+Despite the rapid evolutions of VR technology, accessibility remains an afterthought in most virtual environments. With over one hundred locomotion techniques available, few research efforts have explored their benefits for users with mobility impairments \cite{a4}. A 2024 review of 330 popular VR applications reported a general lack of accessibility features in current VR content \cite{a5}. Many did not even include options like audio cues or haptic feedback to convey information that would help user with limited vision or mobility. Alternative input methods are still rare in most commercial VR titles \cite{a5}. 
+
+This trend has not gone unnoticed, though, accessibility experts have begun publishing guidelines geared towards immersion. For instance, the University of South Carolina's Center for Teaching Excellence acknowledges the accessibility challenges that users face and have set guidelines that are designed to explain the accessibility issues with virtual environments and provide practical solutions \cite{b1}. Similarly, industry articles emphasize providing choices like seated play modes, adjustable movement speeds, and customization button mappings to accommodate those with limited motor function \cite{a6}.
+
+Motivated by the inclusive guidelines from experts, my system emphasizes flexibility, low effort input and choice. Instead of relying on a joystick for manipulation, users speak natural commands that are parsed by Wit.ai and translated into movement, making VR navigation more approachable for a wider range of users. 
+
+ \section{Methodology}
+This study is designed as a pilot experiment to explore the feasibility of implementing voice control within a virtual reality environments. Using an Oculus Quest 3 headset coupled with the Wit.ai voice interface, the system enables hands-free navigation and object selection within a simple living room VR environment on Unity. 
+ 
+ \subsection{Sample}
+The participants consists of a convenience sample of four participants that include my partner, their mother, and my two children. Although the sample does not represent a broad unbiased population, it provides initial insights into the usability of the voice-controlled VR interface within different age groups.  
+
+
+\subsection{Apparatus}
+The primary hardware component of this study is the Oculus Quest 3. This system is an all-in-one VR headset developed by Meta. It features a high-resolution display with a per-eye resolution of approximately 2064 x 2208 pixels and a wide field of view. The headset comes equipped with inside-out tracking via integrated cameras, allowing for precise head tracking. Additionally, the Oculus Quest 3 is equipped with a built-in microphone for voice command input. 
+
+The VR system was developed in Unity with voice input processed using Wit.ai. Commands such as "forward five steps" were parsed into actionable tokens. Movement in the virtual space was executed in increments to match the number of steps dictated in the command. Directional control was achieved using head orientation: if a participant turned their head beyond a threshold angle of 45 degrees, either left or right, their forward-facing direction was reoriented accordingly. This removed the need for a joystick-based turning and made the experience fully hands-free. 
+
+
+
+\subsection{Independent Variable}
+The independent variable is the implementation of  voice commands through the Wit.ai interface. These commands were integrated into the Unity VR system and included actions such as "forward", "forward 5 steps", "back" and  "back 5 steps." These were used exclusively to control movement within the virtual environment.
+
+\subsection{Dependent Variables}
+The dependent variables were the performance and user experience outcomes of the system:
+\begin{itemize}
+\item {\texttt{Task Completion Time}}: The quantitative measurement in seconds, this records how long it takes participants to reach the end of the maze.
+\item {\texttt{Error Rate}}: A quantitative measurement that tracks the number of missed voice commands
+\item {\texttt{User Feedback}}: A qualitative measurement collected upon completion of the tasks, includes ratings on ease-of-use, satisfaction, and overall experience with the voice controlled VR system.  
+\end{itemize}
+\subsection{Design And Procedure}
+\begin{itemize}
+\item {\texttt{Introduction And Briefing}}: The participants were given a brief overview of the study's purpose. They were instructed on how to wear the Oculus Quest 3 and provided with a short demonstration explaining how head movements coupled with voice commands allow for navigation and interaction.
+\item {\texttt{Experimental Task}}: Participants started at a predefined location within the virtual maze. They were instructed to navigate through the maze until they reach the exit, using head movement, to orient direction, while speaking the command "forward five steps". To ensure reliability, each participant completed multiple trials of the navigation and interaction tasks.
+\item {\texttt{Data Analysis}}: The dependent variables were collected manually by the researcher, error amount during each task and time to complete each task. After completion of the trials, user feedback was asked via survey consisting of ease-of-use, satisfaction, and overall experience with the voice controlled VR system.  
+\end{itemize}
+
+\section{Results and Findings}
+This section presents the quantitative metric data and the qualitative feedback gathered during the pilot study. 
+\subsection{Task Completion Time, Error, and Commands}
+Participants completed the maze navigation tasks using head movements and voice commands with varying levels of efficiency and accuracy. Table 1 shows the average completion times and number of missed or unrecognized commands for each participant. 
+\begin{table}[htbp]
+  \caption{Average task time and error count by participant}
+  \label{tab:performance}
+  \begin{tabular}{lcccc}
+    \toprule
+    Participant & Avg. Time (s) & Avg. Errors & Avg. Total commands & Recognition Rate\\
+    \midrule
+    P1 & 5:18 & 16 & 59 & 72.9\%\\
+    P2 & 7:59 & 23 & 84 & 72.6\%\\
+    P3 & 5:08 & 9 & 58 & 84.5\%\\
+    P4 & 3:29 & 4 & 34 & 88.2\%\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\[
+\text{The recognition rate was calculated using the following formula:}
+\]
+\[
+\text{Recognition Rate (\%)} = \left(1 - \frac{\text{Errors}}{\text{Total Commands}}\right) \times 100
+\]
+
+Despite expectations that younger users would perform better, results showed the oldest participant (p4) completed the task the fastest with the fewest errors and fewer commands needed overall. In contrast, p2 issued the most commands (84) and also had the highest error rate (23), leading to the slowest completion time. This inverse relationship between age and error frequency suggests that clarity and consistency in voice input, rather than age, were more influential on system performance. 
+\subsection{Command Recognition and System Performance}
+Recognition rates demonstrated the relationship between speech clarity and system performance. Older participants (p3 and p4) had higher recognition rates (84.5\% and 88.2\%), while younger participants (p1 and p2) had lower rates (72.9\% and 72.6\%). These results suggest that recognition accuracy is dependent on consistent speech patterns and structured command phrasing.
+
+While the recognition rates varied by participant, another key factor influencing the performance was the responsiveness and speed of the natural language processing system Wit.ai. The system needed to not only understand the spoken commands but respond in a timely manner. In many of the trials, this delay would frustrate the situation when the participant is saying the commands multiple times with the wrong intent happening. This finding reinforces the idea that voice interfaces are only as effective as the system's ability to interpret commands quickly and accurately. While AI tools like Wit.ai can handle natural language well, designing for VR requires optimizing for both understanding and speed to avoid disrupting the user.
+
+
+\subsection{Participant Feedback}
+Participants where asked to complete a survey with 7 scalable questions and 3 optional open feedback questions.
+\begin{table}[htbp]
+  \caption{All participants used a scale (1 = strongly disagree, 10 = strongly agree) to rate their experience.}
+\label{tab:Feedback}
+  \begin{tabular}{lcc}
+    \toprule
+    Question & Avg. Score\\
+    \midrule
+    1. How easy was it to learn the voice commands? &  7.25\\
+    2. How well did the system understand your voice commands? &  6.25\\
+    3. How responsive was the system after you gave a voice command? & 7\\
+    4. how natural did the movement feel when using step-based voice commands?&7.25 \\
+    5. How accessible did you find the VR experience for someone with mobility impairments? & 8.75\\
+    6. How comfortable was it to use voice instead of physical input? &7.75\\
+    7. How satisfied where you with overall experience? & 7.75\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The participant feedback strongly supports the system's usability and potential for accessible VR interaction. Scores were especially high for accessibly and comfort, although one participant did mention dizziness while performing the test. Additionally, users complained of delayed responsiveness, and accuracy indicating refinements areas for this and future systems. 
+\section{Discussion}
+The results of this study highlight several important findings regarding the usability and accessibility of a voice-controlled VR interface, particularly for users across different age groups. Contrary to expectations, age was not a limiting factor in successful system usage. In face, the oldest participant (age62) outperformed all others in task completion time, error rate, and recognition accuracy. this suggests that speech clarity and consistent phrasing had a more significant impact on performance that age or familiarity with VR. 
+
+Another insight was the impact of the response time and AI interpretation delay. In some trials, recognition lag led to user frustration, particularly when a command was misheard or delayed. This highlights the need for natural language to accurately interpret and invoke the command with little to no delay after the user speaks. To be a viable real-time application, voice controlled VR system must balance natural input with technical responsiveness. The most inclusive systems fail if it causes repeated misfires or delays that break immersion. In future iterations, systems could benefit from: 
+
+\begin{itemize}
+    \item Local/offline processing to reduce latency.
+    \item Visual or audio feedback confirming command recognition.
+    \item Adaptive learning models that better handle child and non-native speaker input.
+    
+\end{itemize}
+\section{Conclusion}
+This study demonstrates the potential of voice controlled navigation systems to improve accessibility in virtual environments. Developed on Unity for the Oculus Quest 3, using head movement to turn, and integrating Wit.ai for natural language interpretation. This hands-free step-based navigation system offers an alternative to traditional controller-based systems, especially for those who have limited motor functions.
+
+
+Despite a small and diverse sample, the results showed that speech clarity and consistent phrasing had a great impact on performance. Older participants outperformed younger ones in both recognition accuracy and task completion time. Recognition rates ranged from 72.6\% to 88.2\%, demonstrating the feasibility of natural language command in VR.
+
+However, the system's effectiveness was limited by response delays and recognition inconsistencies, especially when phrasing varied or input was unclear. These issues require faster and a more accurate AI processing. Future work should involve a broader and more diverse pool of participants. Incorporating adaptive feedback and local speech processing could further enhance usability and accessibility. By reducing reliance on physical controllers and enabling natural interaction, this research contributes to more inclusive virtual environments that prioritize user diversity. 
+
+% The next two lines define the bibliography style to be used, and
+% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{References}
+
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\appendix
+
+
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-acmlarge.tex'.
