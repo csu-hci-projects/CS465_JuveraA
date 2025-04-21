@@ -1,6 +1,6 @@
 Video for YouTube - 
-Prototype- https://youtu.be/Oh8xNo-Mfvs
-Code- https://youtu.be/mlp9b9p7GUs
+Prototype- https://www.youtube.com/watch?v=Oh8xNo-Mfvs
+Code- https://www.youtube.com/watch?v=mlp9b9p7GUs
 
 
 overleaf LaTex -https://www.overleaf.com/read/pqwmbmwcyqms#15a54f
